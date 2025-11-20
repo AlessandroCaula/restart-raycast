@@ -1,4 +1,4 @@
-import { Alert, confirmAlert } from "@raycast/api";
+import { Alert, confirmAlert, showToast, Toast } from "@raycast/api";
 import { runAppleScript } from "@raycast/utils";
 
 export default async function main() {
@@ -13,9 +13,17 @@ export default async function main() {
 
   if (!confirmed) return;
 
-  await runAppleScript(`
+  try {
+    await runAppleScript(`
     tell application "Raycast" to quit
-    delay 0.3
+    delay 0.5
     tell application "Raycast" to activate
   `);
+  } catch (error) {
+    await showToast({
+      style: Toast.Style.Failure,
+      title: "Failed to restart Raycast",
+    });
+    console.error("Failed to restart Raycast:", error);
+  }
 }
