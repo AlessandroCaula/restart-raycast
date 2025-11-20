@@ -6,8 +6,7 @@
   "icon": "extension-icon.png",
   "author": "koala1206",
   "platforms": [
-    "macOS",
-    "Windows"
+    "macOS"
   ],
   "license": "MIT",
   "commands": [
