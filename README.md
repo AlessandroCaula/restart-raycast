@@ -15,7 +15,7 @@ Before installing, make sure you have:
 
 ## Usage
 
-1. Clone the repository locally on your computer.
+1. Clone or download the repository locally on your computer.
 
 2. Open Raycast and choose **Import Extension**.
 
