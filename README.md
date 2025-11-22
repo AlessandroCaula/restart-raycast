@@ -25,11 +25,16 @@ Before installing, make sure you have:
 
 4. After that, the command **Restart Raycast** will appear in Raycast. Run it whenever Raycast starts consuming too much RAM.
 
+## Platform Support
+
+- **macOS**: Uses AppleScript for a clean restart
+- **Windows**: Uses PowerShell to kill and relaunch Raycast
+
 ### Notes
 
-- Works on macOS only.
+- The restart uses Raycast's normal quit flow on macOS. On Windows, it force-quits the process.
 
-- The restart uses Raycast’s normal quit flow. It doesn’t force-quit anything.
+- Windows users: The extension tries common installation paths. If it can't find Raycast, you'll need to restart manually.
 
 ------------------------
 
